@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: taddemo/conference:0.0.1
+        image: tads2015da/demo-conference:0.0.1
         env:
         - name: EXTERNAL_IP
           value: 192.168.176.220
