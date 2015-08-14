@@ -7,10 +7,10 @@ restcomm = 192.168.176.220:8080
 [Redis]
 channel = conf
 [ServerPort]
-main = 7090
-conference = 7091
-advertising = 7092
-portal = 7093
+main = 30790
+conference = 30791
+advertising = 30792
+portal = 30793
 [Callback]
 phone = +5555
 conference = 9999

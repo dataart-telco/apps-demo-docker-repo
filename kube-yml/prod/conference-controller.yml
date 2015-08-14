@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: conference
+  labels:
+    name: conference
+spec:
+  replicas: 1
+  selector:
+    name: conference
+  template:
+    metadata:
+      labels:
+        name: conference
+    spec:
+      containers:
+      - name: main
+        image: taddemo/conference:0.0.1
+        env:
+        - name: EXTERNAL_IP
+          value: 192.168.176.220
+        - name: RESTCOMM_SERVICE
+          value: 52.0.167.47:8080
+        ports:
+        - containerPort: 30791

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: advertising
+  labels:
+    name: advertising
+spec:
+  containers:
+    - image: taddemo/advertising:0.0.1
+      name: advertising
+      env:
+        - name: EXTERNAL_IP
+          value: 192.168.176.220
+        - name: RESTCOMM_SERVICE
+          value: 52.0.167.47:8080
+      ports:
+        - containerPort: 30792
+        - containerPort: 30793

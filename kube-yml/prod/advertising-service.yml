@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: advertising
+  labels:
+    name: advertising
+spec:
+  type: LoadBalancer
+  ports:
+    # the port that this service should serve on
+  - name: app
+    port: 30792
+    targetPort: 30792
+  - name: portal
+    port: 30793
+    targetPort: 30793
+  selector:
+    name: advertising

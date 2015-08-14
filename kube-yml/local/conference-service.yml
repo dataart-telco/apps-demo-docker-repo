@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: conference
+  labels:
+    name: conference
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+  - port: 30791
+    targetPort: 30791
+    nodePort: 30791
+  selector:
+    name: conference
