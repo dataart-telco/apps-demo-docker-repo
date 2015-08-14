@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: main
-        image: tads2015da/demo-main:0.0.1
+        image: tads2015da/demo-main:0.0.5
         env:
         - name: EXTERNAL_IP
-          value: 192.168.176.220
+          value: 172.31.35.179
         - name: RESTCOMM_SERVICE
-          value: 52.0.167.47:8080
+          value: 52.6.201.57:8080
         ports:
         - containerPort: 30790
