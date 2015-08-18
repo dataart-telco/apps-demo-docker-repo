@@ -10,9 +10,9 @@ spec:
       name: advertising
       env:
         - name: EXTERNAL_IP
-          value: 172.31.35.179
+          value: EXTERNAL_IP_VALUE
         - name: RESTCOMM_SERVICE
-          value: 52.6.201.57:8080
+          value: RESTCOMM_SERVICE_VALUE
       ports:
         - containerPort: 30792
         - containerPort: 30793
