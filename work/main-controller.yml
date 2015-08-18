@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: main
+  labels:
+    name: main
+spec:
+  replicas: 1
+  selector:
+    name: main
+  template:
+    metadata:
+      labels:
+        name: main
+    spec:
+      containers:
+      - name: main
+        image: tads2015da/demo-main:0.0.5
+        env:
+        - name: EXTERNAL_IP
+          value: ac7d4b37545c911e5b7b11260ed06e85-596386553.us-east-1.elb.amazonaws.com
+        - name: RESTCOMM_SERVICE
+          value: 192.168.176.220:7070
+        ports:
+        - containerPort: 30790
