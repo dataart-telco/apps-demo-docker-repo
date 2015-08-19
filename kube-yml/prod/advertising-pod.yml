@@ -6,7 +6,7 @@ metadata:
     name: advertising
 spec:
   containers:
-    - image: tads2015da/demo-advertising:0.0.5
+    - image: tads2015da/demo-advertising:0.0.9
       name: advertising
       env:
         - name: EXTERNAL_IP

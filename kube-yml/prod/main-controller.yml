@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: tads2015da/demo-main:0.0.5
+        image: tads2015da/demo-main:0.0.9
         env:
         - name: EXTERNAL_IP
           value: EXTERNAL_IP_VALUE
