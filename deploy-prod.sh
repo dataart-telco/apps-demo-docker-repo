@@ -4,7 +4,7 @@ kubectl create -f kube-yml/prod/conference-service.yml
 kubectl create -f kube-yml/prod/advertising-service.yml
 
 mainHost=$(kubectl get service/main -o json | grep hostname | sed 's/.*: //' | sed -e 's/^"//'  -e 's/"$//')
-confereceHost=$(kubectl get service/conference -o json | grep hostname | sed 's/.*: //' | sed -e 's/^"//'  -e 's/"$//')
+conferenceHost=$(kubectl get service/conference -o json | grep hostname | sed 's/.*: //' | sed -e 's/^"//'  -e 's/"$//')
 adHost=$(kubectl get service/advertising -o json | grep hostname | sed 's/.*: //' | sed -e 's/^"//'  -e 's/"$//')
 
 echo "Main host: "$mainHost
