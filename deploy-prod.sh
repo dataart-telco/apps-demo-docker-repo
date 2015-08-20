@@ -16,7 +16,7 @@ mkdir work
 sed "s/EXTERNAL_IP_VALUE/"$mainHost"/g" kube-yml/prod/main-controller.yml > ./work/main-controller.yml
 sed "s/EXTERNAL_IP_VALUE/"$conferenceHost"/g" kube-yml/prod/conference-controller.yml > ./work/conference-controller.yml
 sed "s/EXTERNAL_IP_VALUE/"$adHost"/g" kube-yml/prod/advertising-pod.yml > ./work/advertising-pod.yml
-cp kube-yml/prod/advertising-pod.yml ./work/advertising-pod.yml
+cp kube-yml/prod/mailagent-pod.yml ./work/mailagent-pod.yml
 
 restCommService=$1
 gmailUser=$2

@@ -13,10 +13,10 @@ spec:
           value: EXTERNAL_IP_VALUE
         - name: RESTCOMM_SERVICE
           value: RESTCOMM_SERVICE_VALUE
-	- name: GMAIL_USER
-	  value: GMAIL_USER_VALUE
-	- name: GMAIL_PASS
-	  value: GMAIL_PASS_VALUE
-	- name: DUMP_TIMER
-	  value: 5
+        - name: GMAIL_USER
+          value: GMAIL_USER_VALUE
+        - name: GMAIL_PASS
+          value: GMAIL_PASS_VALUE
+        - name: DUMP_TIMER
+          value: "5"
 
