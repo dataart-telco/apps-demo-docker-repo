@@ -7,10 +7,10 @@ gmailCredentials=`cat /var/run/kubernetes-master/mail-acc`
 gmailUser=`echo $gmailCredentials | awk '{print $1}'`
 gmailPass=`echo $gmailCredentials | awk '{print $2}'`
 
-kubectl create -f kube-yml/prod/redis-service.yml
-kubectl create -f kube-yml/prod/main-service.yml
-kubectl create -f kube-yml/prod/conference-service.yml
-kubectl create -f kube-yml/prod/advertising-service.yml
+kubectl create -f kube-yml/prod/redis-service.yml &> /dev/null
+kubectl create -f kube-yml/prod/main-service.yml &> /dev/null
+kubectl create -f kube-yml/prod/conference-service.yml &> /dev/null
+kubectl create -f kube-yml/prod/advertising-service.yml &> /dev/null
 
 mainHost=$loadbalancerIp
 conferenceHost=$loadbalancerIp
@@ -36,10 +36,10 @@ sed -i "s/RESTCOMM_SERVICE_VALUE/"$restCommService"/g" ./work/mailagent-pod.yml
 sed -i "s/GMAIL_USER_VALUE/"$gmailUser"/g" ./work/mailagent-pod.yml
 sed -i "s/GMAIL_PASS_VALUE/"$gmailPass"/g" ./work/mailagent-pod.yml
 
-kubectl stop -f kube-yml/prod/redis-controller.yml
-kubectl stop -f ./work/main-controller.yml
-kubectl stop -f ./work/conference-controller.yml
-kubectl stop -f ./work/mailagent-pod.yml 
+kubectl stop -f kube-yml/prod/redis-controller.yml &> /dev/null
+kubectl stop -f ./work/main-controller.yml &> /dev/null
+kubectl stop -f ./work/conference-controller.yml &> /dev/null
+kubectl stop -f ./work/mailagent-pod.yml &> /dev/null
 
 kubectl create -f kube-yml/prod/redis-controller.yml
 kubectl create -f ./work/main-controller.yml
