@@ -1,3 +1,5 @@
+export KUBERNETES_MASTER=`netstat -nap | grep apiserver | grep LISTEN | grep 8080 | awk '{print $4}'`
+
 loadbalancerIp=`cat /var/run/kubernetes-master/haproxy-public-address`
 restCommService=`cat /var/run/kubernetes-master/restcomm-address`
 gmailCredentials=`cat /var/run/kubernetes-master/mail-acc`
