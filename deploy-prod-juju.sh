@@ -1,4 +1,4 @@
-loadbalancerIp=`cat /var/run/kubenetes-master/haproxy-public-address`
+loadbalancerIp=`cat /var/run/kubernetes-master/haproxy-public-address`
 restCommService=`cat /var/run/kubernetes-master/restcomm-address`
 gmailCredentials=`cat /var/run/kubernetes-master/mail-acc`
 
