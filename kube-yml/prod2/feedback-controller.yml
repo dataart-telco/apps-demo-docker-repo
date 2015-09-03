@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: advertising
+  name: feedback
   labels:
-    name: advertising
+    name: feedback
 spec:
   containers:
     - image: tads2015da/demo-advertising:0.0.9
-      name: advertising
+      name: feedback
       env:
         - name: EXTERNAL_IP
           value: EXTERNAL_IP_VALUE
