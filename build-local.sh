@@ -1,5 +1,7 @@
-docker build -t tads2015da/demo-main:0.0.9 ./demo-main
-docker build -t tads2015da/demo-conference:0.0.9 ./demo-conference
-docker build -t tads2015da/demo-advertising:0.0.9 ./demo-advertising
-docker build -t tads2015da/mailagent:0.0.9 ./mailagent
+VERSION=`cat images.version`
 
+docker build -t tads2015da/calls-consumer:$VERSION ./calls-consumer
+docker build -t tads2015da/conference-call:$VERSION ./conference-call
+#ocker build -t tads2015da/demo-advertising:0.0.9 ./demo-advertising
+docker build -t tads2015da/mailagent:$VERSION ./mailagent
+docker build -t tads2015da/sms-feedback:$VERSION ./sms-feedback
