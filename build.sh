@@ -1,5 +1,5 @@
 VERSION=`cat images.version`
-GIT_VERSION=v0.10
+GIT_VERSION=v0.11
 
 docker build -t tads2015da/calls-consumer:$VERSION https://github.com/taddemo2015/vas-demo-docker-repo.git#$GIT_VERSION:calls-consumer
 docker build -t tads2015da/conference-call:$VERSION https://github.com/taddemo2015/vas-demo-docker-repo.git#$GIT_VERSION:conference-call
