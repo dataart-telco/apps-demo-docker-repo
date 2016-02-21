@@ -3,7 +3,7 @@ VERSION=`cat images.version`
 if [ "$#" -eq 1 ]; then
     APP=$1
     echo "Build single app: $APP"
-    docker build -t tads2015da/$APP:$VERSION ./$APP
+    docker build --no-cache -t tads2015da/$APP:$VERSION ./$APP
     exit 0
 fi
 
